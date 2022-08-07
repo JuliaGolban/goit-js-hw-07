@@ -1,34 +1,36 @@
-**Read in other languages: [Русский](README.md), [Українська](README.ua.md).**
+**Read in other languages: [English](README.md), [Українська](README.ua.md).**
 
-В файле `gallery-items.js` есть массив `galleryItems`, который содержит объекты
-с информацией о изображениях: маленькое (превью), оригинальное (большое) и
-описание. Мы уже подключили его к каждому из JS-файлов проекта.
+In the `gallery-items.js` file, there is an array called `galleryItems`, which
+contains objects with information about images: small (preview), original
+(large) and description. It has already been added to each of the project's JS
+files.
 
-## Задание 1 - галерея изображений
+## Task 1 - image gallery
 
-Создай галерею с возможностью клика по её элементам и просмотра полноразмерного
-изображения в модальном окне. Посмотри демо видео работы галереи.
+Create a gallery with the ability to click on its items and view full size
+images in a modal window. Check out the demo video of the gallery.
 
-Выполняй это задание в файлах `01-gallery.html` и `01-gallery.js`. Разбей его на
-несколько подзадач:
+Do this task in the `01-gallery.html` and `01-gallery.js`files. Break it down
+into several subtasks:
 
-1. Создание и рендер разметки по массиву данных `galleryItems` и
-   предоставленному шаблону элемента галереи.
-2. Реализация делегирования на `div.gallery` и получение `url` большого
-   изображения.
-3. Подключение скрипта и стилей библиотеки модального окна `basicLightbox`.
-   Используй CDN сервис `jsdelivr` и добавь в проект ссылки на минифицированные
-   `(.min)` файлы библиотеки.
-4. Открытие модального окна по клику на элементе галереи. Для этого ознакомься с
-   документацией и примерами. 5/ Замена значения атрибута src элемента `<img>` в
-   модальном окне перед открытием. Используй готовую разметку модального окна с
-   изображением из примеров библиотеки `basicLightbox`.
+1. Creating and rendering markup from the `galleryItems` data array and provided
+   gallery item template.
+2. Implementing delegation to `div.gallery` and getting the `url` of a large
+   image.
+3. Adding the script and styles of the modal window library `basicLightbox`. Use
+   the `jsdelivr` service and add links to minified `(.min)` library files to
+   your project.
+4. ОOpening a modal window by clicking on a gallery item. To do this, check out
+   the documentation and examples.
+5. Replacing the value of the `src` attribute of the `<img>` element in a modal
+   window before opening. Use the ready-made modal window markup with the image
+   from the examples of the `basicLightbox` library.
 
-### Разметка элемента галереи
+### Gallery item markup
 
-Ссылка на оригинальное изображение должна храниться в data-атрибуте `source` на
-элементе `<img>`, и указываться в href ссылки. Не добавляй другие HTML теги или
-CSS классы кроме тех, что есть в этом шаблоне.
+The link to the original image must be stored in the `source` data attribute on
+the `<img>`element and specified in the link's `href`. Do not add any HTML tags
+or CSS classes other than those in this template.
 
 ```json
 <div class="gallery__item">
@@ -43,28 +45,26 @@ CSS классы кроме тех, что есть в этом шаблоне.
 </div>
 ```
 
-Обрати внимание на то, что изображение обернуто в ссылку, а значит при клике по
-умолчанию пользователь будет перенаправлен на другую страницу. Запрети это
-поведение по умолчанию.
+Please note that the image is wrapped in a link, which means that, when clicked,
+the user will be redirected to another page by default. Disable this behavior by
+default.
 
-### Закрытие с клавиатуры
+### Closing from keyboard
 
-** ВНИМАНИЕ Этот функционал не обязателен при сдаче задания, но будет хорошей
-дополнительной практикой.**
+**ATTENTION** The following features are optional, but they will be a good
+additional practice.
 
-Добавь закрытие модального окна по нажатию клавиши `Escape`. Сделай так, чтобы
-прослушивание клавиатуры было только пока открыто модальное окно. У библиотеки
-`basicLightbox` есть метод для программного закрытия модального окна.
+Add modal window closing upon pressing the `Escape`key. Make keyboard listening
+available only while the modal window is open. In the `basicLightbox` library,
+there is a method to close the modal window programmatically.
 
-## Задание 2 - библиотека SimpleLightbox
+## Task 2 - SimpleLightbox library
 
-Сделай такую же галерею как в первом задании, но используя библиотеку
-`SimpleLightbox`, которая возьмет на себя обработку кликов по изображениям,
-открытие и закрытие модального окна, а также пролистывание изображений при
-помощи клавиатуры. Посмотри демо видео работы галереи с подключенной
-библиотекой.
+Create the same gallery as in the first task, but using the
+`SimpleLightbox`library, which will handle image clicks, modal opening and
+closing and image scrolling with the keyboard.
 
-Необходимо немного изменить разметку карточки галереи, используй этот шаблон.
+It is necessary to slightly change the gallery card markup; use this template.
 
 ```json
 <a class="gallery__item" href="large-image.jpg">
@@ -72,18 +72,17 @@ CSS классы кроме тех, что есть в этом шаблоне.
 </a>
 ```
 
-Выполняй это задание в файлах `02-lightbox.html` и `02-lightbox.js`. Разбей его
-на несколько подзадач:
+Do this task in the `02-lightbox.html` and `02-lightbox.js`files. Break it down
+into several subtasks:
 
-1. Создание и рендер разметки по массиву данных `galleryItems` и
-   предоставленному шаблону элемента галереи. Используй готовый код из первого
-   задания.
-2. Подключение скрипта и стилей библиотеки используя `CDN` сервис `cdnjs`.
-   Необходимо добавить ссылки на два файла: `simple-lightbox.min.js` и
+1. Creating and rendering markup from the `galleryItems` data array and provided
+   gallery element template. Use the ready-made code from the first task.
+2. Adding the script and library styles using the `cdnjs` CDN service. You need
+   to add links to two files: `simple-lightbox.min.js` and
    `simple-lightbox.min.css`.
-3. Инициализация библиотеки после того как элементы галереи созданы и добавлены
-   в `div.gallery`. Для этого ознакомься с документацией `SimpleLightbox` - в
-   первую очередь секции `«Usage»` и `«Markup»`.
-4. Посмотри в документации секцию `«Options»` и добавь отображение подписей к
-   изображениям из атрибута `alt`. Пусть подпись будет снизу и появляется через
-   250 миллисекунд после открытия изображения.
+3. Library initialization after gallery items are created and added to
+   `div.gallery`. To do this, read the `SimpleLightbox` documentation - first of
+   all, the `Usage` and `Markup` sections.
+4. Look in the documentation for the `«Options»` section and add image caption
+   display from the `alt` attribute. Let the caption be at the bottom and appear
+   250 milliseconds after image opening.

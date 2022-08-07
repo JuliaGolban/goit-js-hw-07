@@ -1,4 +1,4 @@
-**Read in other languages: [Русский](README.md), [Українська](README.ua.md).**
+**Read in other languages: [English](README.md), [Українська](README.ua.md).**
 
 ## Завдання 1 - галерея зображень
 
